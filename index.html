@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Обчислення квадрату </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script language="Javascript">
+function calculateArea(a, b, c) {
+
+var ploshad = (parseFloat(a.value)*parseFloat(a.value));
+
+var perimetr = (4*parseFloat(a.value));
+
+var diagonal = (parseFloat(a.value)*Math.sqrt(2));
+
+var radiusvpis = (parseFloat(a.value)/2);
+
+var radiusopis = (parseFloat(a.value)*(Math.sqrt(2/2)));
+
+
+
+        form1.output1.value = ploshad;
+        form1.output2.value = perimetr;
+        form1.output3.value = diagonal;
+        form1.output4.value = radiusvpis;
+        form1.output5.value = radiusopis;
+}
+</script>
+</head>
+<body>
+<p>
+Обчислення квадрату
+</p>
+<form name="form1">
+<fieldset style="width: 40%">
+<legend> Введення даних </legend>
+Сторона: <input type="text" size=7 name="st1">
+</fieldset>
+<fieldset style="width: 40%">
+<legend> Обробка та виведення даних </legend>
+Площа: <input type="text" size=7 name="output1" readonly> <br>
+Периметр: <input type="text" size=7 name="output2" readonly> <br>
+Діагональ: <input type="text" size=7 name="output3" readonly> <br>
+Радіус вписаного кола: <input type="text" size=7 name="output4" readonly> <br>
+Радіус описаного кола: <input type="text" size=7 name="output5" readonly> <br>
+<input type="button" value="Обчислити" style="margin:10px" onClick="calculateArea(form1.st1, form1.st2, form1.st3)">
+</fieldset>
+</form>
+<p style="text-align:center;">
+<img src="Kvadrat.jpg" style="width:300px;">
+</p>
+</body>
+</html>
